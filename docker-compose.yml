@@ -1,0 +1,64 @@
+version: "3.7"
+services:
+  app:
+    build:
+      args:
+        user: igor
+        uid: 1000
+      context: ./
+      dockerfile: Dockerfile
+    image: uiara
+    container_name: uiara-app
+    restart: unless-stopped
+    tty: true
+    working_dir: /var/www/
+    volumes:
+      - ./:/var/www
+    networks:
+      - uiara
+
+  db:
+    image: mariadb
+    container_name: uiara-db
+    restart: unless-stopped
+    tty: true
+    environment:
+      MYSQL_DATABASE: uiara
+      MYSQL_ROOT_PASSWORD: asd
+      MYSQL_PASSWORD: asd
+      MYSQL_USER: root
+      SERVICE_TAGS: dev
+      SERVICE_NAME: mysql
+    ports:
+      - "3306:3306"
+    volumes:
+      - ./docker-compose/mysql:/docker-entrypoint-initdb.d
+    networks:
+      - uiara
+
+  phpmyadmin:
+    image: phpmyadmin
+    container_name: uiara-phpmyadmin
+    restart: unless-stopped
+    environment:
+      - MYSQL_ROOT_PASSWORD=asd
+    ports:
+      - "8080:80"
+    networks:
+      - uiara
+
+  nginx:
+    image: nginx
+    container_name: uiara-nginx
+    restart: unless-stopped
+    ports:
+      - "80:80"
+    volumes:
+      - ./:/var/www
+      - ./docker-compose/nginx:/etc/nginx/conf.d/
+    networks:
+      - uiara
+
+networks:
+  uiara:
+    driver: bridge
