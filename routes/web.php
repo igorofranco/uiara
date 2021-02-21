@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\Article\ArticleController;
 use App\Http\Controllers\AuthController;
 use App\Http\Controllers\Podcast\PodcastController;
 use App\Http\Controllers\Podcast\PodcastEpisodeController;
@@ -30,3 +31,12 @@ Route::prefix('podcast')->group(function () {
   Route::get('/edit-epi/{epi}',[PodcastEpisodeController::class,'edit'])->name('epi.edit');
   Route::post('/edit-epi/{epi}',[PodcastEpisodeController::class,'update'])->name('epi.update');
 });
+
+// ARTIGOS
+Route::get('/artigos',[ArticleController::class,'show'])->name('article.index');
+Route::get('/artigo/{slug}',[ArticleController::class,'show'])->name('article.show');
+Route::get('/novo-artigo',[ArticleController::class,'create'])->name('article.create');
+Route::post('/novo-artigo',[ArticleController::class,'store'])->name('article.store');
+Route::get('/editar-artigo/{article}',[ArticleController::class,'edit'])->name('article.edit');
+Route::post('/editar-artigo/{article}',[ArticleController::class,'update'])->name('article.update');
+Route::post('/deletar-artigo/{article}',[ArticleController::class,'destroy'])->name('article.destroy');
