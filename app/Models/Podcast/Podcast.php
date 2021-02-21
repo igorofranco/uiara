@@ -55,15 +55,14 @@ class Podcast extends Model{
   <itunes:email>'.$this->owner_email.'</itunes:email>
 </itunes:owner>
 <image>
-  <title>Uiara Franco Podcast</title>
+  <title>'.$this->title.'</title>
   <link>'.route('podcast.home').'</link>
-  <url>https://uiarafranco.adv.br/podcast-media/logo.jpg</url>
+  <url>'.env('APP_URL').'/podcast-media/logo.jpg</url>
 </image>';
 
     foreach($this->episodes->sortByDesc('id') as $epi){
       $audio = new Mp3Info('podcast-media/epi-0001.mp3');
       $durationInSeconds = round($audio->duration);
-      //$duration = sprintf('%02d:%02d:%02d',($durationInSeconds/3600),($durationInSeconds/60%60),$durationInSeconds%60);
 
       $mp3 = Storage::disk('local');
       $xml .=
