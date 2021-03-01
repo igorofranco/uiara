@@ -38,7 +38,7 @@
       list-style: none;
       margin: 1rem 0 1rem -2rem;
     }
-    li::before,em::before{
+    .container > ul > li::before,em::before{
       content: "";
       background-color: #f5e6ed;
       display: inline-block;
@@ -81,17 +81,61 @@
       border-radius: .2rem;
       background-color: #e45fee;
     }
-
-    @media only screen and (max-width: 640px){
-      .main-logo{
+    ul{
+      font-size: 1.125rem;
+    }
+    li{
+      list-style: none;
+      margin: 1rem;
+    }
+    /* FOOTER */
+    footer{
+      bottom: 0;
+      background-color: #222;
+      color: #eee;
+      font-family: "Lato", sans-serif;
+    }
+    footer > div.footer-container{
+      margin: 0 auto;
+      padding: 0 3rem;
+      max-width: 1080px;
+      display: flex;
+      flex-direction: row;
+      justify-content: space-between;
+      align-items: center;
+    }
+    footer ul{
+      display: flex;
+    }
+    footer a{
+      color: #ffd8ef;
+    }
+    footer i{
+      font-size: 2rem;
+    }
+    @media only screen and (max-width: 640px) {
+      .main-logo {
         width: 50%;
       }
-      section > .container{
+
+      section > .container {
         padding: 1rem;
       }
-      p{
+
+      p {
         text-align: left;
       }
+
+      footer{
+        padding: 2rem 0 0 0;
+      }
+      footer > div.footer-container{
+        flex-direction: column;
+      }
+      footer ul{
+        padding: 0;
+      }
+    }
   </style>
 
 </head>
@@ -434,14 +478,47 @@
       Sendo assim, vamos conversando.
     </p>
     <p>
-      Para manter nossa proximidade, siga-me também no Instagram:
+      Para manter nossa proximidade, siga-me também no
+      <a href="https://www.instagram.com/uiarafranco/">
+        Instagram
+      </a>.
     </p>
-    <a href="https://www.instagram.com/uiarafranco/" target="_blank" class="button-insta">
-      <i class="fab fa-instagram"></i>
-      uiarafranco
-    </a>
   </div>
 </section>
+
+<footer>
+  <div class="footer-container">
+    <div>
+      Uiara Franco
+      &copy; Copyright 2021
+    </div>
+
+    <div>
+      <ul>
+        <li>
+          <a href="https://api.whatsapp.com/send?phone=5531992550403" target="_blank">
+            <i class="fab fa-whatsapp"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://www.instagram.com/uiarafranco/" target="_blank">
+            <i class="fab fa-instagram"></i>
+          </a>
+        </li>
+        <li>
+          <a href="https://open.spotify.com/show/53FT6BC8CbysFzjIqki6Dh" target="_blank">
+            <i class="fab fa-spotify"></i>
+          </a>
+        </li>
+        <li>
+          <a href="#" target="_blank">
+            <i class="fab fa-youtube"></i>
+          </a>
+        </li>
+      </ul>
+    </div>
+  </div>
+</footer>
 
 </body>
 </html>
