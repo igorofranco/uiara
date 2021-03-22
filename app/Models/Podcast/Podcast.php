@@ -40,7 +40,7 @@ class Podcast extends Model{
 <itunes:keywords>direito,família,separação,divórcio,bens</itunes:keywords>
 <itunes:summary>'.$this->description.'</itunes:summary>
 <itunes:subtitle>'.$this->description.'</itunes:subtitle>
-<itunes:image href="https://uiarafranco.adv.br/podcast-media/logo.jpg"/>
+<itunes:image href="'.env('APP_URL').'/podcast-media/logo.jpg"/>
 <itunes:author>'.$this->owner_name.'</itunes:author>
 <dc:creator>'.$this->owner_name.'</dc:creator>
 <title>'.$this->title.'</title>
@@ -74,6 +74,7 @@ class Podcast extends Model{
 <author>'.$this->owner_name.'</author>
 <guid isPermaLink="false">'.route('epi.show',['epi'=>$epi]).'</guid>
 <enclosure url="'.env('APP_URL').'/podcast-media/'. $epi->mp3_uri.'" length="'.($mp3->size('/podcast/'.$epi->mp3_uri)*8).'" type="audio/mpeg"/>
+<image href="'.env('APP_URL').'/podcast-media/'.$epi->img_uri.'"/>
 <itunes:image href="'.env('APP_URL').'/podcast-media/'.$epi->img_uri.'"/>
 <itunes:duration>'.$durationInSeconds.'</itunes:duration>
 <itunes:keywords>'.$this->keywords.'</itunes:keywords>

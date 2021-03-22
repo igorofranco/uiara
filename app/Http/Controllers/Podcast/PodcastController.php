@@ -22,7 +22,7 @@ class PodcastController extends Controller{
   public function rss(){
     $podcast = Podcast::find(1);
     return response($podcast->getRSS())
-      ->header('Content-Type','application/xml');
+      ->header('Content-Type','text/xml');
   }
 
   public function create(){
