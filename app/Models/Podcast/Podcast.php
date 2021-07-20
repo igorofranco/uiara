@@ -98,7 +98,7 @@ class Podcast extends Model{
     $xml->appendChild($header);
 
     dd($xml->saveXML());
-
+*/
     return $xml->saveXML();
 */
     return $xml;
