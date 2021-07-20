@@ -61,7 +61,7 @@ class Podcast extends Model{
 </image>';
 
     foreach($this->episodes->sortByDesc('id') as $epi){
-      $audio = new Mp3Info('podcast-media/epi-0001.mp3');
+      $audio = new Mp3Info('podcast-media/'.$epi->mp3_uri);
       $durationInSeconds = round($audio->duration);
 
       $mp3 = Storage::disk('local');
@@ -73,7 +73,7 @@ class Podcast extends Model{
 <link>'.route('epi.show',['epi'=>$epi]).'</link>
 <author>'.$this->owner_name.'</author>
 <guid isPermaLink="false">'.route('epi.show',['epi'=>$epi]).'</guid>
-<enclosure url="'.env('APP_URL').'/podcast-media/'. $epi->mp3_uri.'" length="'.($mp3->size('/podcast/'.$epi->mp3_uri)*8).'" type="audio/mpeg"/>
+<enclosure url="'.env('APP_URL').'/podcast-media/'.$epi->mp3_uri.'" length="'.($mp3->size('/podcast/'.$epi->mp3_uri)*8).'" type="audio/mpeg"/>
 <image href="'.env('APP_URL').'/podcast-media/'.$epi->img_uri.'"/>
 <itunes:image href="'.env('APP_URL').'/podcast-media/'.$epi->img_uri.'"/>
 <itunes:duration>'.$durationInSeconds.'</itunes:duration>
@@ -88,6 +88,17 @@ class Podcast extends Model{
 
     $xml .= '</channel></rss>';
 
-    return $xml;
+    $xml = new \DOMDocument('1.0','UTF-8');
+
+    //$header = $xml->createElementNS('xmlns:content="http://purl.org/rss/1.0/modules/content/" xmlns:wfw="http://wellformedweb.org/CommentAPI/" xmlns:dc="http://purl.org/dc/elements/1.1/" xmlns:atom="http://www.w3.org/2005/Atom" xmlns:sy="http://purl.org/rss/1.0/modules/syndication/" xmlns:slash="http://purl.org/rss/1.0/modules/slash/" xmlns:itunes="http://www.itunes.com/dtds/podcast-1.0.dtd" xmlns:media="http://search.yahoo.com/mrss/"','rss');
+    $header = $xml->createElement('rss');
+    $header->setAttribute('Version','2.0');
+
+
+    $xml->appendChild($header);
+
+    dd($xml->saveXML());
+
+    return $xml->saveXML();
   }
 }
