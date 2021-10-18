@@ -53,13 +53,15 @@
 
     /* SEÇÃO 1 */
     .background-third1{
-       position: absolute;
-       width: 30%;
-       height: 105vh;
-       background-color: #f3dfeb;
-       z-index: -1;
-     }
+      position: absolute;
+      top: 6em;
+      width: 30%;
+      height: 105vh;
+      background-color: #f3dfeb;
+      z-index: -1;
+    }
     .profile-flex{
+      padding-top: 2em;
       display: flex;
       flex-direction: row;
     }
@@ -253,10 +255,17 @@
       }
     }
   </style>
+  <style>
+    body > main > header{
+      position: fixed;
+      width: 100vw;
+    }
+  </style>
 </head>
 <body>
 
 <main>
+  @include('components.main-header')
   <span class="background-third1"></span>
   <div class="profile-flex">
     <div class="photo-container">
@@ -348,39 +357,7 @@
   </div>
 </section>
 
-<footer>
-  <div class="footer-container">
-    <div>
-      Uiara Franco
-      &copy; Copyright 2021
-    </div>
-
-    <div>
-      <ul>
-        <li>
-          <a href="https://api.whatsapp.com/send?phone=5531992550403" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/uiarafranco/" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://open.spotify.com/show/53FT6BC8CbysFzjIqki6Dh" target="_blank">
-            <i class="fab fa-spotify"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_blank">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </li>
-      </ul>
-    </div>
-  </div>
-</footer>
+@include('components.footer')
 
 </body>
 </html>

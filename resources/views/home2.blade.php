@@ -10,8 +10,8 @@
     <meta name="keywords" content="advocacia, contagem, belo horizonte, advogado, advogada, direito">
     <meta name="description" content="Serviços de advocacia, consultoria em direito.">
     <meta name="og:title" content="Uiara Franco Advocacia">
-    <meta name="og:image" content="">
-    <meta property="og:image" itemprop="image" content="">
+    <meta name="og:image" content="/img/og-logo01.jpg">
+    <meta property="og:image" itemprop="image" content="/img/og-logo01.jpg">
 
     <!-- FONTES -->
     <link rel="preconnect" href="https://fonts.gstatic.com">

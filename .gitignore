@@ -19,3 +19,5 @@ storage/*.key
 .env
 /.vagrant
 .phpunit.result.cache
+/.idea
+/.idea/*

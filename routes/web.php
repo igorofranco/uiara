@@ -33,7 +33,7 @@ Route::prefix('podcast')->group(function () {
 });
 
 // ARTIGOS
-Route::get('/artigos',[ArticleController::class,'show'])->name('article.index');
+Route::get('/artigos',[ArticleController::class,'index'])->name('article.index');
 Route::get('/artigo/{slug}',[ArticleController::class,'show'])->name('article.show');
 Route::get('/novo-artigo',[ArticleController::class,'create'])->name('article.create');
 Route::post('/novo-artigo',[ArticleController::class,'store'])->name('article.store');

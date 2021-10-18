@@ -6,12 +6,13 @@ use App\Http\Controllers\Controller;
 use App\Models\Article\Article;
 use Illuminate\Http\Request;
 use Illuminate\Http\RedirectResponse;
+use Illuminate\Support\Str;
 
 class ArticleController extends Controller{
 
   public function index(){
-    return view('article.show',[
-      'article' => Article::all()
+    return view('article.index',[
+      'articles' => Article::all()
     ]);
   }
 
@@ -21,8 +22,11 @@ class ArticleController extends Controller{
 
   public function store(Request $request):RedirectResponse{
     $article = new Article();
-    $article->setParametersByRequest($request);
-    $article->save();
+    $article->save([
+      'title'=>$request->title,
+      'slug'=>Str::slug($this->title,'-','pt-br'),
+      'text'=>$request->text
+    ]);
     return redirect()->route('article.show',['article'=>$article]);
   }
 
@@ -39,8 +43,11 @@ class ArticleController extends Controller{
   }
 
   public function update(Request $request, Article $article):RedirectResponse{
-    $article->setParametersByRequest($request);
-    $article->update();
+    $article->update([
+      'title'=>$request->title,
+      'slug'=>Str::slug($this->title,'-','pt-br'),
+      'text'=>$request->text
+    ]);
     return redirect()->route('article.show',['article'=>$article]);
   }
 
