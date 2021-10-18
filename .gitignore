@@ -21,3 +21,4 @@ storage/*.key
 .phpunit.result.cache
 /.idea
 /.idea/*
+composer.lock
