@@ -7,7 +7,7 @@
 
     <div>
       <div>
-        Developed by<br><a href="https://github.com/igorofranco">Igor Franco</a>
+        Developed by<br><a href="https://github.com/igorofranco" target="_blank">Igor Franco</a>
       </div>
       <div>
         <ul>
