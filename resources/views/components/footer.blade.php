@@ -6,28 +6,33 @@
     </div>
 
     <div>
-      <ul>
-        <li>
-          <a href="https://api.whatsapp.com/send?phone=5531992550403" target="_blank">
-            <i class="fab fa-whatsapp"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://www.instagram.com/uiarafranco/" target="_blank">
-            <i class="fab fa-instagram"></i>
-          </a>
-        </li>
-        <li>
-          <a href="https://open.spotify.com/show/53FT6BC8CbysFzjIqki6Dh" target="_blank">
-            <i class="fab fa-spotify"></i>
-          </a>
-        </li>
-        <li>
-          <a href="#" target="_blank">
-            <i class="fab fa-youtube"></i>
-          </a>
-        </li>
-      </ul>
+      <div>
+        Developed by<br><a href="https://github.com/igorofranco">Igor Franco</a>
+      </div>
+      <div>
+        <ul>
+          <li>
+            <a href="https://api.whatsapp.com/send?phone=5531992550403" target="_blank">
+              <i class="fab fa-whatsapp"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://www.instagram.com/uiarafranco/" target="_blank">
+              <i class="fab fa-instagram"></i>
+            </a>
+          </li>
+          <li>
+            <a href="https://open.spotify.com/show/53FT6BC8CbysFzjIqki6Dh" target="_blank">
+              <i class="fab fa-spotify"></i>
+            </a>
+          </li>
+          <li>
+            <a href="#" target="_blank">
+              <i class="fab fa-youtube"></i>
+            </a>
+          </li>
+        </ul>
+      </div>
     </div>
   </div>
 </footer>
@@ -47,6 +52,22 @@
     flex-direction: row;
     justify-content: space-between;
     align-items: center;
+  }
+  footer > div.footer-container > div:nth-of-type(2){
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  footer > div.footer-container > div:nth-of-type(2) > div:nth-of-type(1){
+    font-size: .75em;
+    color: #aaa;
+  }
+  footer > div.footer-container > div:nth-of-type(2) > div:nth-of-type(1) > a{
+    text-decoration: none;
+    color: inherit;
+  }
+  footer > div.footer-container > div:nth-of-type(2) > div:nth-of-type(1) > a:hover{
+    color: goldenrod;
   }
   footer ul{
     display: flex;
