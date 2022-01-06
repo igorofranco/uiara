@@ -337,10 +337,10 @@
       <li>
         <div>
           <h2>
-            Assessoria Jurídica Empresarial
+            Advocacia Humanizada
           </h2>
           <p>
-            A consultoria jurídica representa um serviço que tem como objetivo aconselhar o cliente em relação às práticas que podem ser aplicadas para identificar e resolver problemas ou melhorar as operações do negócio.
+            Uma forma de ter um olhar sistêmico e global de tudo o que envolve a questão do processo judicial. A advocacia humanizada tem como premissa uma atuação baseada no atendimento personalizado, respeito às diferenças e valorização do sentimento mútuo.
           </p>
         </div>
         <div>
