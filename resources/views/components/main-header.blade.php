@@ -19,6 +19,7 @@
 <style>
   header#main-header{
     background-color: #f3dfeb;
+    box-shadow: 0 0 8px rgba(0,0,0,.15);
   }
   header#main-header div{
     height: 3em;

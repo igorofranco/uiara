@@ -261,6 +261,15 @@
       width: 100vw;
     }
   </style>
+  <style>
+    section.section3{
+      margin: 4em auto;
+    }
+    section.section3 > div.container > ul {
+      margin: 0 auto;
+      max-width: 640px;
+    }
+  </style>
 </head>
 <body>
 
@@ -353,6 +362,45 @@
         </div>
       </li>
 
+    </ul>
+  </div>
+</section>
+
+<section class="section3">
+  <div class="container">
+    <ul>
+      <li class="square-mark">Divórcio Imediato em Cartório ou Judicial, Consensual ou Litigioso;</li>
+      <li class="square-mark">Pedido de Pensão Alimentícia de Filhos, Cônjuges e Parentes, Alimentos Provisórios (Emergenciais) Lei 5.478/1968;</li>
+      <li class="square-mark">Ação de Exoneração de Alimentos contra filhos que completaram 21 anos;</li>
+      <li class="square-mark">Ação de Prorrogação de Pensão Alimentícia até os 24 anos para filhos universitários;</li>
+      <li class="square-mark">Revisão e Exoneração de Alimentos diante da mudança da capacidade econômica do Alimentante e do Alimentando;</li>
+      <li class="square-mark">Reconhecimento e Dissolução da União Estável (Em cartório ou Judicial) e sua conversão em Casamento;</li>
+      <li class="square-mark">Investigação de Paternidade, Direito a Ancestralidade (Reconhecimento da Paternidade dos seus pais, direito a uma identidade genética) e Parentalidade (DNA);</li>
+      <li class="square-mark">Investigação e Reconhecimento de Filhos e Pais;</li>
+      <li class="square-mark">Retificação Judicial de Registro Civil da Ancestralidade por erro de Grafia (com intuito de adquirir cidadania estrangeira por ancestrais);</li>
+      <li class="square-mark">Autorização Judicial para viagem ao Exterior com os filhos, suprimindo a ausência e autorização de um dos pais;</li>
+      <li class="square-mark">Direito e Regulamentação de Visitas e Direito de Visitas dos Avós (Lei 12.398/11);</li>
+      <li class="square-mark">Guarda Compartilhada (Lei 11.698/2008) de Menores e Guarda Uniparental;</li>
+      <li class="square-mark">Anulação e Invalidade do Casamento;</li>
+      <li class="square-mark">SAP – Síndrome de Alienação Parental, Lei 12.318/2010 (Destruição da Imagem de um dos pais contra o outro junto aos filhos) e proibição de visitação por um dos pais;</li>
+      <li class="square-mark">Emancipação, Interdição, Tutela e Curatela de Incapazes;</li>
+      <li class="square-mark">Direito Familiar do Idoso, Alimentos do Idoso Direitos e Obrigações dos Avôs (visita, guarda e obrigação alimentar);</li>
+      <li class="square-mark">Responsabilidade Civil Familiar, Dano Moral Familiar, Deveres do Casamento e da União Estável, Dano Moral e Alimentos;</li>
+      <li class="square-mark">Dano Moral Afetivo no Noivado e Namoro;</li>
+      <li class="square-mark">Orientação e Elaboração de Pacto Antenupcial e de Contratos de Convivência;</li>
+      <li class="square-mark">Bem de Família Legal (Lei 8.009/90), Bem de Família Convencional (Código Civil) e Bem de Família do Solteiro;</li>
+      <li class="square-mark">Inventários em Cartório (Lei 11.441/2007) que possibilita a realização de inventários, partilhas, separação consensual e divórcio consensual por via administrativa.</li>
+      <li class="square-mark">Inventários na Forma Litigiosa por via Judicial;</li>
+      <li class="square-mark">Orientação e Planejamento sucessório objetivando a preservação e a perpetuação do patrimônio familiar e empresas familiares;</li>
+      <li class="square-mark">Direito Sucessório na União Estável;</li>
+      <li class="square-mark">Elaboração de Testamentos, Doações;</li>
+      <li class="square-mark">Escrituras Familiares;</li>
+      <li class="square-mark">Venda de Bens aos Sucessores;</li>
+      <li class="square-mark">Anulação de Partilha;</li>
+      <li class="square-mark">Anulação e Revogação de Testamentos;</li>
+      <li class="square-mark">Elaboração de testamentos e acompanhamento de inventários e arrolamentos;</li>
+      <li class="square-mark">Anulação de Doações realizadas com fraude;</li>
+      <li class="square-mark">Entre outras ações relacionadas.</li>
     </ul>
   </div>
 </section>
